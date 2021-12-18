@@ -53,7 +53,7 @@
 
 // Support directory listing (1 / 0)?
 #ifndef FATFS_DIR_LIST_SUPPORT
-    #define FATFS_DIR_LIST_SUPPORT          0
+    #define FATFS_DIR_LIST_SUPPORT          1
 #endif
 
 // Support time/date (1 / 0)?
@@ -70,7 +70,7 @@
 #define FAT_SECTOR_SIZE                     512
 
 // Printf output (directory listing / debug)
-#define FAT_PRINTF
+#define FAT_PRINTF(x)
 #ifndef FAT_PRINTF
     // Don't include stdio, but there is a printf function available
     #ifdef FAT_PRINTF_NOINC_STDIO
