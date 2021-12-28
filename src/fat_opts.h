@@ -26,13 +26,13 @@
 
 // Number of sectors per FAT_BUFFER (min 1)
 #ifndef FAT_BUFFER_SECTORS
-    #define FAT_BUFFER_SECTORS              2
+    #define FAT_BUFFER_SECTORS              1
 #endif
 
 // Max FAT sectors to buffer (min 1)
 // (mem used is FAT_BUFFERS * FAT_BUFFER_SECTORS * FAT_SECTOR_SIZE)
 #ifndef FAT_BUFFERS
-    #define FAT_BUFFERS                     2
+    #define FAT_BUFFERS                     1
 #endif
 
 // Size of cluster chain cache (can be undefined)
@@ -70,7 +70,7 @@
 #define FAT_SECTOR_SIZE                     512
 
 // Printf output (directory listing / debug)
-#define FAT_PRINTF(x)
+#define FAT_PRINTF(x) ;
 #ifndef FAT_PRINTF
     // Don't include stdio, but there is a printf function available
     #ifdef FAT_PRINTF_NOINC_STDIO
